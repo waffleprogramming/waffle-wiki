@@ -10,7 +10,7 @@
   var txt;
     jQuery.get("articles.html",function(data,status){txt=data;var info=txt.split("~");
     var articleData=info[info.indexOf(location.hash)+1];
-    document.getElementsByTagName("body").innerHTML+=articleData;
+    document.getElementsByTagName("body")[0].innerHTML+=articleData;
 });
     
   </script>
