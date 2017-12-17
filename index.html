@@ -6,7 +6,13 @@
 <body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
-  
+    $.noConflict();
+  var txt;
+    jQuery.get("articles.txt",function(data,status){txt=data;});
+    var info=txt.split("~");
+    var articleData=info[info.indexOf(location.hash)+1];
+    document.getElementsByTagName("body").innerHTML+=articleData;
+
   </script>
 </body>
 </html>
