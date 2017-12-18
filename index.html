@@ -3,19 +3,20 @@
   <head>
     <title>Waffle Wiki</title>
   </head>
-<body>
+<body onload="load();">
   <nav>
     <a href="https://waffleprograming.github.io/waffle-wiki/">Home</a>
     <a href="https://waffleprograming.github.io/waffle-wiki/#about">About</a>
   </nav>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
+    function load() {
     $.noConflict();
   var txt;
     jQuery.get("articles.html",function(data,status){txt=data;var info=txt.split("~");
     var articleData=info[info.indexOf(location.hash)+1];
     document.getElementsByTagName("body")[0].innerHTML+=articleData;
-});
+});}
     
   </script>
 </body>
