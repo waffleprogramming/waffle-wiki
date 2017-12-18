@@ -5,8 +5,8 @@
   </head>
 <body onload="load();">
   <nav>
-    <a href="https://waffleprograming.github.io/waffle-wiki/">Home</a>
-    <a href="https://waffleprograming.github.io/waffle-wiki/#about">About</a>
+    <a style="color:blue;text-decoration:none" href="https://waffleprograming.github.io/waffle-wiki/">Home</a>
+    <p style="color:blue;text-decoration:none" onclick="open('https://waffleprograming.github.io/waffle-wiki/#about');">About</p>
   </nav>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
@@ -17,12 +17,7 @@
     jQuery.get("articles.html",function(data,status){txt=data;var info=txt.split("~");
     var articleData=info[info.indexOf(location.hash)+1];
     document.getElementsByTagName("body")[0].innerHTML+=articleData;
-    function refreshCheck() {
-    if(document.getElementsByTagName("body")[0].innerHTML.search(articleData)!==-1){
-       self['location']['reload']();
-       }
-    }
-    var interval=setInterval(refreshCheck,10);
+    
 });}
     
   </script>
