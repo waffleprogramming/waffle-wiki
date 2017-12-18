@@ -4,6 +4,7 @@
     <title>Waffle Wiki</title>
   </head>
 <body onload="load();">
+  <div id="div"></div>
   <nav>
     <a style="color:blue;text-decoration:none" href="https://waffleprograming.github.io/waffle-wiki/">Home</a>
     <a style="color:blue;text-decoration:none" href="#about" onclick="load();">About</a>
@@ -11,7 +12,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
     function load() {
-document.getElementsByTagName("body")[0].innerHTML='  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>'+document.getElementsByTagName("body")[0].innerHTML;
+      document.getElementById("div").innerHTML='<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>';
     $.noConflict();
   var txt;
     jQuery.get("articles.html",function(data,status){txt=data;var info=txt.split("~");
