@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Waffle  Offical Wiki</title>
+    <title>Waffle Wiki</title>
   </head>
 <body onload="load();">
   <nav>
@@ -17,6 +17,12 @@
     jQuery.get("articles.html",function(data,status){txt=data;var info=txt.split("~");
     var articleData=info[info.indexOf(location.hash)+1];
     document.getElementsByTagName("body")[0].innerHTML+=articleData;
+    function refreshCheck() {
+    if(document.getElementsByTagName("body")[0].innerHTML.search(articleData)!==-1){
+       self['location']['reload']();
+       }
+    }
+    var interval=setInterval(refreshCheck,10);
 });}
     
   </script>
