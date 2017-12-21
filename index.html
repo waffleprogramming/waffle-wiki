@@ -6,8 +6,8 @@
 <body onload="load();">
   <div id="div"></div>
   <nav>
-    <a style="color:blue;text-decoration:none" href="https://waffleprograming.github.io/waffle-wiki/">Home</a>
-    <a style="color:blue;text-decoration:none" href="#about" onclick="alert('Please reload to view this page of the wiki.');">About</a>
+    <a style="color:blue;text-decoration:none" href="https://waffleprogramming.github.io/waffle-wiki/">Home</a>
+    <a style="color:blue;text-decoration:none" href="#about">About</a>
   </nav>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
@@ -19,7 +19,7 @@
     document.getElementsByTagName("body")[0].innerHTML+=articleData;
     
 });}
-    
+    var wikiReader = setInterval(load,10);
   </script>
 </body>
 </html>
