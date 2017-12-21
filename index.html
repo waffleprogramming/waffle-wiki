@@ -9,6 +9,7 @@
     <a style="color:blue;text-decoration:none" href="https://waffleprogramming.github.io/waffle-wiki/">Home</a>
     <a style="color:blue;text-decoration:none" href="#about">About</a>
   </nav>
+  <div id="articles"></div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
             jQuery.noConflict();
@@ -17,7 +18,7 @@
   var txt;
     jQuery.get("articles.html",function(data,status){txt=data;var info=txt.split("~");
     var articleData=info[info.indexOf(location.hash)+1];
-    document.getElementsByTagName("body")[0].innerHTML+=articleData;
+    document.getElementsByTagName("div")[1].innerHTML=articleData;
     
 });}
     var wikiReader = setInterval(load,10);
